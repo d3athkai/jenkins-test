@@ -11,8 +11,8 @@ pipeline {
 		}
 
 		stage("test1") {
-			hostname
-			whoami
+			bash -c "hostname"
+			bash -c "whoami"
 		}
 
 	}
