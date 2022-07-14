@@ -6,19 +6,13 @@ pipeline {
 
 		stage("build") {
 			when {
-				{ changeset pattern: "Jenkinsfile" }
+				changeset pattern: "Jenkinsfile"
 			}
 			steps {
 				echo 'building application'
 			}
 		}
 
-		stage("test1") {
-			steps {
-				bash -c "hostname"
-				bash -c "whoami"
-			}
-		}
 
 	}
 
