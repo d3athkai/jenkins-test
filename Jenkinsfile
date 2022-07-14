@@ -6,7 +6,7 @@ pipeline {
 
 		stage("build") {
 			when {
-				changeset pattern: "Jenkinsfile"
+				{ changeset pattern: "Jenkinsfile" }
 			}
 			steps {
 				echo 'building application'
